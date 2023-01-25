@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.registration {
+    color: rgb(186, 22, 186);
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.dialog-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.1);
+    position: fixed;
+
+}
+
+#dialog {
+    width: 350px;
+    height: fit-content;
+    padding: 1rem 1.5px 1px 1.5rem;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    position: relative;
+    border: 2px solid black;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cross {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    background-color: rgb(186, 22, 186);
+    border-radius: 50%;
+    color: aliceblue;
+    padding: 0px 5px 1px 5px;
+    cursor: pointer;
+}
+
+.small {
+    color: red;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    display: none;
+    /* display: contents; */
+}
+
+.form-element,
+.form-element-address {
+    width: 300px;
+    height: 40px;
+    position: relative;
+}
+
+.form-element-address {
+    width: 300px;
+    height: 60px
+}
+
+.form-element input,
+.form-element select,
+.form-element-address textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 4px;
+    resize: none;
+    padding: 10px;
+    font-size: 15px;
+    /* margin: .5rem; */
+    /* outline: none; */
+}
+
+.form-element label,
+.form-element-address label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: top .3s;
+    padding: 0 4px;
+}
+
+.form-element,
+.form-element-address {
+    margin-bottom: 1.5rem;
+}
+
+#male,
+#female {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-element input:focus~label,
+.form-element input:valid~label,
+.form-element input:not(:placeholder-shown)~label,
+.form-element-address textarea:focus~label,
+.form-element-address textarea:valid~label,
+.form-element select:focus~label,
+.form-element select:valid~label {
+    top: -9px;
+    background-color: white;
+}
+
+.form-element input:not(:placeholder-shown):invalid,
+.form-element textarea:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+
+
+
+.signup__reset-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem 0rem .5rem 0rem;
+}
+
+.signup,
+.reset {
+    background: green;
+    border: 1px solid green;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+    box-shadow: blanchedalmond;
+    color: white;
+    text-transform: uppercase;
+}
+
+.reset {
+    background-color: rgb(186, 22, 186);
+}
+
+.delete__modal-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+.delete-modal {
+    width: 350px;
+    height: fit-content;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem 1rem 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2%;
+}
+
+#delete_png {
+    width: 50px;
+    margin: 2rem 7rem;
+
+}
+
+.cancel_delete-container {
+    /* background-color: turquoise; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: .5rem 1rem;
+    margin: 0px 10px;
+}
+
+#cancel_btn {
+    padding: .4rem 1rem;
+    margin-right: 10px;
+    margin-top: 5px;
+    background-color: red;
+    border-color: red;
+    border-radius: 5%;
+    color: white;
+    cursor: pointer;
+}
+
+#delete_btn {
+    padding: .4rem 1rem;
+    margin-top: 5px;
+    border-color: dodgerblue;
+    background-color: dodgerblue;
+    border-radius: 5%;
+    color: white;
+    cursor: pointer;
+}
