@@ -1,10 +1,12 @@
 import './App.css';
+import './index.css'
+
 import Register from './components/Register';
 import Update from './components/Update';
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import DeleteModal from './components/DeleteModal';
 
-function App() {
+const App = () => {
 
   const [showEdit, setShowEdit] = useState(false)
   const [showRegister, setShowRegister] = useState(false)
@@ -43,12 +45,12 @@ function App() {
 
         <div className='title__searchbar-container'>
           <div className='icon__title-container'>
-            <img src='/users.png' id='users' />
+            <img src="%PUBLIC_URL%/images/users.png" id='users' />
             <label>User Details</label>
           </div>
           <div className='searchbar__adduser-container'>
             <input type='search' placeholder='Search...' />
-            <img src='/addUser.jpg' id='adduser' onClick={handleRegister} />
+            <img src="%PUBLIC_URL%/images/addUser.jpg" alt='add User' id='adduser' onClick={handleRegister} />
           </div>
         </div>
 
@@ -75,14 +77,16 @@ function App() {
                 <td>{user.mobile}</td>
                 <td>{user.gender}</td>
                 <td>{user.citySelector}</td>
-                <td><img src='/edit.png' id='edit' onClick={(e) => { handleEdit(e, user.id) }} /></td>
-                <td><img src='/delete.png' id='delete' onClick={(e) => { handleDelete(e, user.id) }} /></td>
+                {/* <td><img src="%PUBLIC_URL%/images/favicon.ico" alt="Tatvasoft" height={80} className="me-2" style={{ borderRadius: "50%" }} /></td> */}
+                <td><img src='%PUBLIC_URL%/images/edit.png' id='edit' onClick={(e) => { handleEdit(e, user.id) }} /></td>
+                <td><img src="%PUBLIC_URL%/images/delete.png" id='delete' onClick={(e) => { handleDelete(e, user.id) }} /></td>
               </tr>))
             }
           </table>
         </div>
 
       </div>
+      {/* <code>conso</code> */}
     </div>
   );
 }

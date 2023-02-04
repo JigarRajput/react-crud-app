@@ -19,7 +19,7 @@ const DeleteModal = ({ open, show, user, setUsers }) => {
     return (
         <div className='delete__modal-container'>
             <div className='delete-modal'>
-                <img src='/delete.png' id='delete_png' /><br />
+                <img src="%PUBLIC_URL/images/delete.png" id='delete_png' /><br />
                 <label className='are_you_sure'>Are you sure you want to delete user {user.name}</label><br />
                 <div className='cancel_delete-container'>
                     <button id='cancel_btn' onClick={() => show(!open)}>Cancel</button>
