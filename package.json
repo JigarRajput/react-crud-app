@@ -2,7 +2,7 @@
   "name": "crud-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://JigarRajput.github.io/crud-react-app",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "serve": "^14.2.0"
   }
 }
