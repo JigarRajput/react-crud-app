@@ -1,5 +1,6 @@
 import React from 'react'
 import './form.css'
+import deleteImg from '../images/delete.png'
 
 const DeleteModal = ({ open, show, user, setUsers }) => {
 
@@ -19,7 +20,7 @@ const DeleteModal = ({ open, show, user, setUsers }) => {
     return (
         <div className='delete__modal-container'>
             <div className='delete-modal'>
-                <img src="../../images/delete.png" id='delete_png' /><br />
+                <img src={deleteImg} id='delete_png' /><br />
                 <label className='are_you_sure'>Are you sure you want to delete user {user.name}</label><br />
                 <div className='cancel_delete-container'>
                     <button id='cancel_btn' onClick={() => show(!open)}>Cancel</button>
